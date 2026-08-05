@@ -534,6 +534,96 @@ h1,h2,h3,p,dl,dd,figure,blockquote{ margin:0; }
 }
 
 /* ============================================================
+   women's health
+   ============================================================ */
+
+.wh{ background:var(--cream); }
+
+.wh__grid{
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);
+  gap:clamp(24px, 3.4vw, 62px);
+  align-items:start;
+}
+
+.wh__shot{
+  position:relative;
+  border-radius:var(--r);
+  overflow:hidden;
+  aspect-ratio:4/4.6;
+}
+.wh__shot img{
+  width:100%; height:100%;
+  object-fit:cover;
+  object-position:52% 42%;
+  filter:var(--grade);
+}
+.wh__shot figcaption{
+  position:absolute;
+  left:clamp(16px, 1.6vw, 24px);
+  right:clamp(16px, 1.6vw, 24px);
+  bottom:clamp(16px, 1.6vw, 24px);
+  padding:15px 18px;
+  border-radius:12px;
+  background:rgba(245,241,234,.92);
+  backdrop-filter:blur(8px);
+  font-size:13px;
+  line-height:1.5;
+  color:var(--ink);
+}
+
+.wh__list{ display:flex; flex-direction:column; }
+
+.wh__item{
+  padding:clamp(20px, 2.2vw, 30px) 0;
+  border-top:1px solid var(--line);
+}
+.wh__item:first-child{ border-top:0; padding-top:0; }
+.wh__item:last-child{ padding-bottom:0; }
+
+.wh__item h3{
+  display:flex;
+  align-items:baseline;
+  flex-wrap:wrap;
+  gap:10px;
+  font-size:clamp(19px, 1.7vw, 25px);
+  font-weight:500;
+  letter-spacing:-.022em;
+}
+.wh__item h3 .cn{
+  font-family:var(--cn);
+  font-size:.6em;
+  font-weight:400;
+  letter-spacing:.06em;
+  color:var(--brown);
+  opacity:.7;
+}
+.wh__item p{
+  margin-top:11px;
+  max-width:52ch;
+  font-size:14.5px;
+  line-height:1.62;
+  color:var(--brown);
+}
+
+.wh__note{
+  margin-top:clamp(30px, 3.4vw, 48px);
+  padding:clamp(20px, 2vw, 28px) clamp(22px, 2.2vw, 32px);
+  border-radius:var(--r);
+  background:var(--cream-deep);
+  max-width:78ch;
+  font-size:14.5px;
+  line-height:1.62;
+  color:var(--brown);
+}
+.wh__note em{
+  font-family:var(--serif);
+  font-style:italic;
+  font-size:1.12em;
+  color:var(--ink);
+}
+
+/* ============================================================
    treatments
    ============================================================ */
 
@@ -744,6 +834,8 @@ h1,h2,h3,p,dl,dd,figure,blockquote{ margin:0; }
    ============================================================ */
 
 @media (max-width:1080px){
+  .wh__grid{ grid-template-columns:1fr; }
+  .wh__shot{ aspect-ratio:16/10; }
   .about__grid{ grid-template-columns:1fr; }
   .panel{ grid-row:auto; min-height:320px; }
   .shot--wide{ grid-column:auto; }

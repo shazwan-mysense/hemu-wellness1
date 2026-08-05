@@ -5,6 +5,10 @@ Layout follows the MOVA studio reference supplied by the client: full-bleed hero
 floating inset card, cream editorial body, oversized wordmark with a bronze ring, and a
 horizontal treatment rail.
 
+**Positioned on women's health** at the client's request — fertility support alongside
+IVF and IUI, cycle and uterine care, pregnancy and postpartum, and menopause. See
+"Women's health positioning" below for how the fertility copy is worded and why.
+
 No build step. Open `index.html`, or serve the folder:
 
 ```bash
@@ -50,18 +54,42 @@ browser the public can reach**:
   testimonial-heavy pattern would have been an empty shell. Trust is carried instead by
   credentials, sourcing and process transparency. Revisit once real reviews exist.
 
+## Women's health positioning
+
+The page now leads on women's health. What changed:
+
+- **Hero** — "A quiet space for women's health at *every stage*", with a pregnancy image
+  in the floating inset card and a lead paragraph naming IVF/IUI support, cycle care,
+  postpartum and menopause.
+- **Nav** — "Women's health" added as the first item.
+- **About panel** — now opens with "Most of our work is women's health".
+- **New `#womens` section** between the wordmark and the treatments rail: four stages —
+  trying to conceive 备孕, cycles and uterine care 调经, pregnancy and postpartum 产后调理,
+  menopause and the years around it 更年期.
+- **Treatments rail** — Women's health moved to first position; a Moxibustion 艾灸 card
+  added (moxa is commonly used in fertility and postpartum work).
+
 ## ⚠️ Advertising law — read before editing the copy
 
 Under Malaysia's **Medicines (Advertisement and Sale) Act 1956**, *infertility* is a
-scheduled restricted condition; advertising a treatment claim for it needs Medicine
+scheduled restricted condition; advertising a **treatment claim** for it needs Medicine
 Advertisements Board approval. Practitioners must also be registered under the
 **T&CM Act 2016 (Act 775)**.
 
-The women's health card is therefore worded as *support* ("Support for menstrual pain,
-irregular cycles, uterine circulation and the months after birth") and the brief's
-"IVF/IUI support, helps natural pregnancy" line was **not** used verbatim. The footer
-carries a results-vary disclaimer. Please keep it that way, and route any fertility copy
-past the client's own compliance check.
+Leading on fertility is fine — claiming to *cure* or *achieve* pregnancy is not. Every
+fertility line on this page is therefore framed as **support alongside** medical
+treatment, and describes what we actually do (circulation, cycle regularity, sleep,
+stress) rather than promising an outcome:
+
+- ✅ "Support alongside IVF and IUI, or while you are trying naturally"
+- ✅ "We work alongside your fertility clinic and your doctor, never instead of them"
+- ❌ never "helps you get pregnant", "treats infertility", "improves IVF success rates"
+
+The brief's original line — "IVF/IUI Support, helps natural pregnancy" — is **not** used
+verbatim for this reason. The footer carries a results-vary disclaimer, and there is an
+explicit on-page note that we complement rather than replace the fertility clinic.
+Please keep all of this, and route any new fertility copy past the client's own
+compliance check before launch.
 
 ## Images
 
@@ -70,8 +98,12 @@ They are placeholders — replace with real photography of the clinic and its
 practitioners once the renovation is done. Sourcing notes are in
 `scratchpad/images_v2.py` in the working session; the short version:
 
-- `hero-room`, `hero-inset`, `about-portrait`, `tx-acupuncture`, `visit-detail` — Pexels
-- `about-herbs`, `tx-tuina`, `tx-cupping`, `tx-herbal`, `tx-physio`, `tx-womens` — Unsplash
+- `hero-room`, `hero-inset`, `about-portrait`, `tx-acupuncture`, `visit-detail`,
+  `wh-pregnancy`, `wh-expecting`, `tx-womens`, `tx-moxa` — Pexels
+- `about-herbs`, `tx-tuina`, `tx-cupping`, `tx-herbal`, `tx-physio` — Unsplash
+
+`hero-inset.jpg` is no longer referenced (the hero card now uses `wh-expecting.jpg`);
+it is kept in the folder as a spare.
 
 ## Known gaps
 

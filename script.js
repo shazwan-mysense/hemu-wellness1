@@ -8,6 +8,61 @@
   var burger = document.getElementById('burger');
   var drawer = document.getElementById('drawer');
 
+  /* ---- hero slideshow ---- */
+  var slides = document.querySelectorAll('.hero__slide');
+  var dots = document.querySelectorAll('.hero__dots button');
+  var calm = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (slides.length > 1) {
+    var current = 0;
+    var timer = null;
+    var HOLD = 7000;
+
+    function show(next) {
+      if (next === current) return;
+      slides[current].classList.remove('is-on');
+      slides[current].setAttribute('aria-hidden', 'true');
+      dots[current].classList.remove('is-on');
+      dots[current].setAttribute('aria-selected', 'false');
+
+      current = next;
+
+      slides[current].classList.add('is-on');
+      slides[current].setAttribute('aria-hidden', 'false');
+      dots[current].classList.add('is-on');
+      dots[current].setAttribute('aria-selected', 'true');
+    }
+
+    function start() {
+      if (calm) return;
+      stop();
+      timer = setInterval(function () {
+        show((current + 1) % slides.length);
+      }, HOLD);
+    }
+    function stop() {
+      if (timer) { clearInterval(timer); timer = null; }
+    }
+
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        show(Number(dot.dataset.go));
+        start();
+      });
+    });
+
+    var heroEl = document.querySelector('.hero');
+    heroEl.addEventListener('mouseenter', stop);
+    heroEl.addEventListener('mouseleave', start);
+
+    // don't run the carousel while the tab is in the background
+    document.addEventListener('visibilitychange', function () {
+      if (document.hidden) stop(); else start();
+    });
+
+    start();
+  }
+
   /* ---- header pins once the hero has scrolled past ---- */
   if (hdr && hero && 'IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {

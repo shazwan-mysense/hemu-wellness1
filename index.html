@@ -46,29 +46,81 @@
 </div>
 
 <!-- ─────────────────────────  hero  ───────────────────────── -->
-<section class="hero" id="top">
-  <img class="hero__bg" src="images/hero-room.jpg" alt="A patient resting during treatment at Hemu Wellness" fetchpriority="high">
-  <div class="hero__veil"></div>
+<section class="hero" id="top" aria-roledescription="carousel" aria-label="Hemu Wellness">
 
-  <figure class="hero__portal">
-    <img src="images/wh-expecting.jpg" alt="An expectant mother resting a hand on her bump">
-  </figure>
-
-  <div class="hero__foot">
-    <h1 class="hero__title">
-      A quiet space for<br>
-      women's health at<br>
-      <em>every stage</em>
-    </h1>
-
-    <div class="hero__aside">
-      <p>
-        Fertility support alongside IVF and IUI, cycle and uterine care,
-        postpartum recovery and the years around menopause — with Chinese
-        medicine and physiotherapy in Solaris Dutamas.
-      </p>
-      <a href="#visit" class="btn btn--pale btn--wide">Book a first consultation</a>
+  <article class="hero__slide is-on" data-slide="0" aria-hidden="false">
+    <img class="hero__bg" src="images/hero-room.jpg" alt="A patient resting during treatment at Hemu Wellness" fetchpriority="high">
+    <div class="hero__veil"></div>
+    <figure class="hero__portal">
+      <img src="images/wh-expecting.jpg" alt="An expectant mother resting a hand on her bump">
+    </figure>
+    <div class="hero__foot">
+      <h1 class="hero__title">
+        A quiet space for<br>
+        women's health at<br>
+        <em>every stage</em>
+      </h1>
+      <div class="hero__aside">
+        <p>
+          Fertility support alongside IVF and IUI, cycle and uterine care,
+          postpartum recovery and the years around menopause — with Chinese
+          medicine and physiotherapy in Solaris Dutamas.
+        </p>
+        <a href="#visit" class="btn btn--pale btn--wide">Book a first consultation</a>
+      </div>
     </div>
+  </article>
+
+  <article class="hero__slide" data-slide="1" aria-hidden="true">
+    <img class="hero__bg" src="images/wh-pregnancy.jpg" alt="An expectant mother resting at home" loading="lazy">
+    <div class="hero__veil"></div>
+    <figure class="hero__portal">
+      <img src="images/tx-moxa.jpg" alt="A moxa stick held over points along the back" loading="lazy">
+    </figure>
+    <div class="hero__foot">
+      <p class="hero__title">
+        For the months<br>
+        spent hoping and<br>
+        <em>counting days</em>
+      </p>
+      <div class="hero__aside">
+        <p>
+          Support alongside IVF and IUI, or while you are trying naturally.
+          We work on circulation, cycle regularity, sleep, and the strain
+          that the waiting itself puts on a body.
+        </p>
+        <a href="#womens" class="btn btn--pale btn--wide">See how we help</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="hero__slide" data-slide="2" aria-hidden="true">
+    <img class="hero__bg" src="images/hero3-bg.jpg" alt="A woman in her fifties during a treatment session" loading="lazy">
+    <div class="hero__veil"></div>
+    <figure class="hero__portal">
+      <img src="images/hero3-inset.jpg" alt="A patient in midlife before her consultation" loading="lazy">
+    </figure>
+    <div class="hero__foot">
+      <p class="hero__title">
+        Steady hands for<br>
+        the change and<br>
+        <em>the years after</em>
+      </p>
+      <div class="hero__aside">
+        <p>
+          Hot flushes, broken sleep, low mood and aching joints. Care for the
+          whole passage of menopause, not only its worst weeks — with
+          acupuncture, herbal formulas and time to talk.
+        </p>
+        <a href="#womens" class="btn btn--pale btn--wide">See how we help</a>
+      </div>
+    </div>
+  </article>
+
+  <div class="hero__dots" role="tablist" aria-label="Choose a slide">
+    <button class="is-on" data-go="0" role="tab" aria-selected="true"  aria-label="Women's health at every stage"></button>
+    <button              data-go="1" role="tab" aria-selected="false" aria-label="Fertility support"></button>
+    <button              data-go="2" role="tab" aria-selected="false" aria-label="Menopause care"></button>
   </div>
 </section>
 
@@ -108,22 +160,24 @@
       <div class="about__right">
         <div class="caption-card reveal">
           <p>
-            Acupuncture, cupping and tui na work on one system from different angles.
-            Circulation opens, held tension lets go, and the nervous system settles
-            enough for the body to do its own repair.
+            Cycle, sleep, digestion and mood are read as one system. A difficult
+            period and a difficult night are not separate problems here — which
+            is why the first visit asks about all of it before anything is
+            decided.
           </p>
         </div>
 
         <figure class="shot shot--tall reveal">
-          <img src="images/about-portrait.jpg" alt="A patient sitting quietly before her consultation">
+          <img src="images/about-portrait.jpg" alt="An expectant mother with her physician in morning light">
         </figure>
       </div>
 
       <figure class="shot shot--wide reveal">
         <img src="images/about-herbs.jpg" alt="Dried herbs, a mortar and a handwritten formula on a work table">
         <figcaption>
-          Our raw herbs are sourced from Taiwan and arrive batch-tested for
-          heavy metals and pesticide residue.
+          Formulas for cycles, fertility support and postpartum recovery are built
+          from raw herbs sourced in Taiwan, batch-tested for heavy metals and
+          pesticide residue.
         </figcaption>
       </figure>
 

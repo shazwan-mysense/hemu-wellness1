@@ -234,7 +234,8 @@ h1,h2,h3,p,dl,dd,figure,blockquote{ margin:0; }
   align-items:flex-end;
   opacity:0;
   visibility:hidden;
-  transition:opacity 1s ease, visibility 1s ease;
+  /* kept short so a 2s hold isn't spent mid-dissolve */
+  transition:opacity .55s ease, visibility .55s ease;
 }
 .hero__slide.is-on{ opacity:1; visibility:visible; }
 

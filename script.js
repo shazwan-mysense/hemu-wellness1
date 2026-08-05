@@ -16,7 +16,7 @@
   if (slides.length > 1) {
     var current = 0;
     var timer = null;
-    var HOLD = 7000;
+    var HOLD = 2000;   // ms each slide stays up — raise this to slow the carousel down
 
     function show(next) {
       if (next === current) return;
